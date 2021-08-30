@@ -5,10 +5,11 @@
     data-netlify="true"
     data-netlify-honeypot="bot-field"
     name="psa-pets"
+    method="post"
   >
     <v-container>
       <v-row>
-        <input type="hidden" name="form-name" value="psaPets" />
+        <input type="hidden" name="form-name" value="psa-pets" />
         <v-col cols="12" md="6">
           <v-text-field
             v-model="firstname"
