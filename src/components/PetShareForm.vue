@@ -2,6 +2,7 @@
   <v-form
     v-model="valid"
     class="pa-2"
+    netlify
     data-netlify="true"
     data-netlify-honeypot="bot-field"
     name="psa-pets"
