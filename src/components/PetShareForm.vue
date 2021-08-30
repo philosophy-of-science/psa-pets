@@ -74,6 +74,8 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   data: () => ({
     valid: false,
@@ -100,12 +102,19 @@ export default {
       }
 
       const formData = [
+        encode('form-name', 'psa-pets'),
         encode('first', this.firstname),
         encode('last', this.lastname),
         encode('email', this.email),
         encode('social', this.socialMedia),
         encode('petsName', this.petsName),
       ].join('&');
+
+      const axiosConfig = {
+        header: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      };
+
+      axios.post('/', formData, axiosConfig);
     },
   },
 };
